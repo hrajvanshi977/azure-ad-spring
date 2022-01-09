@@ -6,9 +6,9 @@ import org.springframework.security.config.annotation.authentication.configurati
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
-@EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@EnableWebSecurity
 @SpringBootApplication
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class AzureAdApplication {
 
 	public static void main(String[] args) {

@@ -1,0 +1,26 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          azure-client:
+            provider: azure-ad
+            client-id: f743082d-7c0e-4b4c-8347-046edfee62ae
+            client-secret: 2A.7Q~OYMFNraGnzW3XB-gheL~YPU-rQHFlZJ
+            authorization-grant-type: authorization_code
+            #            redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
+            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+            scope: https://graph.microsoft.com/Directory.AccessAsUser.All
+        #            scope: openid
+        provider:
+          azure-ad:
+            authorization-uri: https://login.microsoftonline.com/04bd684e-7981-447e-a1de-a9ad01de85a0/oauth2/v2.0/authorize
+            token-uri: https://login.microsoftonline.com/04bd684e-7981-447e-a1de-a9ad01de85a0/oauth2/v2.0/token
+            jwt-set-uri: https://login.microsoftonline.com/04bd684e-7981-447e-a1de-a9ad01de85a0/discovery/v2.0.1/keys
+            user-info-uri: https://graph.microsoft.com/oidc/userinfo
+            user-name-attribute: name
+#server:
+#  forward-headers-strategy: native
+
+jwt:
+  secret: javainuse
